@@ -1,7 +1,8 @@
 NGINX := $(shell which nginx)
+CURRENT_DIR := $(shell pwd)
 
 run:
-	$(NGINX)
+	$(NGINX) -c $(CURRENT_DIR)/nginx.conf
 
 stop:
 	$(NGINX) -s stop
